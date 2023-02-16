@@ -18,7 +18,7 @@
     age: number;
     pet?: Dog | Fish;
     displayEmpData(): void;
-    displayPetData(): void;
+    displayPetData?(): void;
   }
 
   const emp1: Person = {
@@ -26,11 +26,6 @@
     age: 23,
     displayEmpData() {
       console.log(`my name is ${this.name} and I am ${this.age} years old`);
-    },
-    displayPetData() {
-      console.log(
-        `I have a pet name ${this.pet?.name} and he is ${this.pet?.age} years old`
-      );
     }
   };
 
@@ -79,9 +74,11 @@
 
   emp1.displayEmpData();
   emp2.displayEmpData();
-  emp2.displayPetData();
+  // Type Guard
+  if(typeof emp2.displayPetData !== "undefined") emp2.displayPetData();
   emp3.displayEmpData();
-  emp3.displayPetData();
+  // Type Guard
+  if(typeof emp3.displayPetData !== "undefined") emp3.displayPetData();
 
   // console.log(empX)
 })();

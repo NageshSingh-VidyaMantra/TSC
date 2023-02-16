@@ -48,3 +48,19 @@ let emp2 = 'Details NOT colected'
 
 console.log(emp1)
 console.log(emp2)
+
+// Type function
+
+// Eg 1
+type AddFun = (num1: number, num2: number) => number;
+let add: AddFun;
+add = (num1: number, num2: number) => {
+    return num1 + num2;
+}
+
+//Eg 2
+type MulFun = (num1: number, num2: number) => number;
+let mul: AddFun;
+mul = (num1: number, num2: number) => {
+    return num1 * num2;
+}
