@@ -64,3 +64,17 @@ let mul: AddFun;
 mul = (num1: number, num2: number) => {
     return num1 * num2;
 }
+
+
+type en = {en : string}
+type hi = {hi : string | number}
+type fr = {fr : string}
+
+// type LangCode = en & hi & fr;
+type LangCode = en | hi | fr;
+let langCode: LangCode = {
+  en:'England',
+  hi:'India',
+  fr:'France'
+}
+console.log(langCode);
