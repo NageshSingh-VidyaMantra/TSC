@@ -10,15 +10,9 @@ generateResult = (param) => {
 
 console.log(generateResult(5));
 */
-// Generic Way
-// function takeAnyType1(param: any){
-//     console.log(param);
-//     return param;
-// }
-function takeAnyType2(param) {
-    console.log(param);
-}
-// takeAnyType1('qwerty');
-takeAnyType2('qwerty');
-takeAnyType2(12345);
-takeAnyType2(true);
+var language;
+language = {
+    en: 'England',
+    hi: 'India',
+    fr: 'France'
+};
