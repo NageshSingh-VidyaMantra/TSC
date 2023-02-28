@@ -17,7 +17,8 @@
     items: number[];
   };
 
-  type hybridAdmin = Admin & Employee & Staff;
+  // type hybridAdmin = Admin | Employee | Staff; // A union type describes a value that can be one of several types.
+  type hybridAdmin = Admin & Employee & Staff; // An intersection type combines multiple alias types into one.
 
   const hybrid_Admin: hybridAdmin = {
     name: "Anna",

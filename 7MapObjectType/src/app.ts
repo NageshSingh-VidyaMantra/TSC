@@ -5,6 +5,9 @@
 // A mapped type is a generic type which uses a union of PropertyKeys
 // (frequently created via a keyof) to iterate through keys to create a type:
 
+// Keep in mind that a mapped object type is a distinct type operator -
+// that syntax in the braces can't be used in interfaces, or object types with other members. 
+
 (() => {
   console.log("Mapped Types TypeScript");
 

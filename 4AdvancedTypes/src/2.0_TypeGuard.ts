@@ -20,12 +20,12 @@
   type hybridAdmin = Admin | Employee | Staff;
   // type hybridAdmin = Admin & Employee & Staff;
   // In case of intersection all are required
-  // const hybrid_Admin: hybridAdmin = {
-  //   name: "Aman",
-  //   privileges: ["coffee-breaks", "complementrey-snacks"],
-  //   startDate: new Date().toLocaleDateString(),
-  //   // items: [12, 25]
-  // };
+  const hybrid_Admin: hybridAdmin = {
+    name: "Aman",
+    privileges: ["coffee-breaks", "complementrey-snacks"],
+    startDate: new Date().toLocaleDateString(),
+    // items: [12, 25]
+  };
 
   function displayHybridAdmin(emp: hybridAdmin) {
     console.log("Name : " + emp.name);
@@ -37,12 +37,12 @@
     else console.error('Nothing Found')
   }
 
-  const hybrid_Admin: hybridAdmin = {
-    name: "Aman",
-    privileges: ["coffee-breaks", "complementrey-snacks"],
-    startDate: new Date().toLocaleDateString(),
-    items: [12, 25],
-  };
+  // const hybrid_Admin: hybridAdmin = {
+  //   name: "Aman",
+  //   privileges: ["coffee-breaks", "complementrey-snacks"],
+  //   startDate: new Date().toLocaleDateString(),
+  //   items: [12, 25],
+  // };
 
   console.log(hybrid_Admin);
 })();
