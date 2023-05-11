@@ -7,7 +7,7 @@
   herName = 456;
   hisName = 321;
 
-  function converter(inputName1: string | number, inputName2: string | number) {
+  function converter(inputName1: nameAlias, inputName2: nameAlias) {
     console.log(inputName1 + String(inputName2));
     console.log(String(inputName1) + +inputName2);
     console.log(+inputName1 + +inputName2);
@@ -31,7 +31,6 @@
         otherInf: [number, string, boolean];
         display(name: string): void;
       }
-    | string;
 
   let emp1: EmpTemplate = {
     name: "aman",
@@ -48,7 +47,7 @@
     },
   };
 
-  let emp2 = "Details NOT colected";
+  let emp2 = "Details NOT collected";
 
   console.log(emp1);
   console.log(emp2);
@@ -90,9 +89,7 @@
     [key in Language]: string;
   };
 
-  let language: LanguageObj;
-
-  language = {
+  let language: LanguageObj = {
     en: "England",
     hi: "India",
     fr: "France",

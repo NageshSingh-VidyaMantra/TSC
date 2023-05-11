@@ -5,7 +5,7 @@
   let user3Input: unknown;
 
   user1Input = "Qwerty";
-  //   user2Input = user1Input;
+    // user2Input = user1Input;
   user3Input = user1Input;
 
   console.log(user1Input);

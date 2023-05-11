@@ -1,7 +1,7 @@
 // Code goes here!
 (function () {
   // interface : describes the structure of an object
-  // you cann't initialize values in interface
+  // you can't initialize values in interface
   // it is use to type check an Object.
 
   // Can create 'contract' that force an implementing class to have 

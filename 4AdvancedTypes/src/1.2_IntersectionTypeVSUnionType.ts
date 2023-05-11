@@ -19,7 +19,7 @@
   };
 
   type hybridAdminIntersection = Admin & Employee & Staff;
-  type hybridAdminUnion = Admin | Employee | Staff;
+  type hybridAdminUnion = Admin | Employee | Staff; // union means only use 1 type out of these 3
 
   const hybrid_Admin_i: hybridAdminIntersection = {
     name: "Anna",
@@ -31,59 +31,25 @@
     },
   };
 
+  // although it is NOT showing any error here BUT this is NOT right
+  // hybrid_Admin_u only belongs to 1 type out of these 3
   const hybrid_Admin_u: hybridAdminUnion = {
-    name: "Aman",
+    name: "Aman-manish",
     privileges: ["complementray-lunch"],
-    items: [7, 27],
-    startDate: new Date().toLocaleDateString(),
+    // items: [7, 27],
+    // startDate: new Date().toLocaleDateString(),
     displayAdminName() {
       return this.name;
     },
   };
 
-
   // Diff 1
-
-  /*
-  Intersection types can hold a subset of its components instances but can use functions of any of them.
-  */
+  // Intersection results in new Type
+  // In case of union we are, using only defined ones NOT crearing our new one.
   console.log(hybrid_Admin_i);
   console.log(hybrid_Admin_i.displayAdminName());
 
-  /*
-   Union types can hold any instance of its components but can’t use functions of one.
-   It can only use properties defined in all its components. 
-  */
   console.log(hybrid_Admin_u);
+  console.log(hybrid_Admin_u.name);
   console.log(hybrid_Admin_u.displayAdminName());
-
-
-  // Diff 2
-
-  // with intersection all merge in to one new type so,
-  // all must me included into it e.g.
-  // in below case it is showing error because we didn't use all properties of
-  // "hybridAdminIntersection_all"
-  
-  type hybridAdminIntersection_all = Admin & Employee & Staff;
-  type hybridAdminUnion_desired = Admin | Employee | Staff;
-
-  const hybrid_Admin_i_all: hybridAdminIntersection_all = {
-    name: "Anna",
-    privileges: ["coffee-breaks"]
-  };
-
-
-  // You can add desired properties **exception: function must be added
-  // although we cann't use it in case of union. 
-  const hybrid_Admin_u_desired: hybridAdminUnion_desired = {
-    name: "Aman",
-    privileges: ["complemantery-lunch"],
-    displayAdminName() {
-      return this.name;
-    },
-  };
-
-  console.log(hybrid_Admin_i_all)
-  console.log(hybrid_Admin_u_desired)
 })();

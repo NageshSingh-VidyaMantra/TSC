@@ -11,7 +11,7 @@
     // Below 'any' takes gender property even if does not exist.
     // But 'generics' alert us that we are accessing undeclared variable. 
     console.log(newObj1.firstName + ' ' + newObj1.lastName + ' G : ' + newObj1.gender);
-    // console.log(newObj1.firstName +' '+ newObj2.lastName +' G : '+ newObj2.gender);
+    // console.log(newObj2.firstName +' '+ newObj2.lastName +' G : '+ newObj2.gender);
     console.log(newObj3.firstName + ' ' + newObj3.hobbies);
     console.log(newObj4.firstName);
 })();

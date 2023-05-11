@@ -9,7 +9,6 @@
   
     function display1(hobbies: string[]): void {
       hobbies.forEach((hobby) => console.log(hobby));
-      return;
     }
   
     function display2(hobbies: string[]): undefined {
